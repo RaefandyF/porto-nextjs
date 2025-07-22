@@ -3,6 +3,7 @@ import { FaCircle } from "react-icons/fa";
 import { projects } from "./data/projects";
 import { FaMedal } from "react-icons/fa6";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 // import useInView  from "./hook/useInView";
 
 export default function Home() {
@@ -42,15 +43,19 @@ export default function Home() {
           <nav className="text-white">
             <ul className="flex gap-10 justify-center mt-1">
               <li>
-                <a className="font-bold underline" href="/">
-                  Home
-                </a>
+                <Link href="/">
+                  <p className="font-bold underline">Home</p>
+                </Link>
               </li>
               <li>
-                <a href="/work">Work</a>
+                <Link href="/work">
+                  <p>Work</p>
+                </Link>
               </li>
               <li>
-                <a href="/about">About</a>
+                <Link href="/about">
+                  <p>About</p>
+                </Link>
               </li>
             </ul>
             <div className="flex justify-between mt-[-2rem] max-[700px]:mt-8 max-[700px]:justify-center px-5">
@@ -82,7 +87,8 @@ export default function Home() {
             //     : "opacity-0 translate-y-10"
             // }`}
           >
-            I'm <span className="text-[#85E4CC] italic">Raefandy Fadila</span>
+            I&apos;m{" "}
+            <span className="text-[#85E4CC] italic">Raefandy Fadila</span>
           </h1>
           <h1
             // ref={ref2}
@@ -309,7 +315,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-[4rem] mt-[5rem]">
-          <a href={projects[0].linkPage} className="cursor-pointer">
+          <Link href={projects[0].linkPage} className="cursor-pointer">
             <div
             // ref={ref10}
             // className={`${
@@ -337,8 +343,8 @@ export default function Home() {
                 {projects[0].titleDescription}
               </p>
             </div>
-          </a>
-          <a href={projects[1].linkPage} className="cursor-pointer">
+          </Link>
+          <Link href={projects[1].linkPage} className="cursor-pointer">
             <div
             // ref={ref11}
             // className={`${
@@ -366,9 +372,9 @@ export default function Home() {
                 {projects[1].titleDescription}
               </p>
             </div>
-          </a>
+          </Link>
 
-          <a href={projects[2].linkPage} className="cursor-pointer">
+          <Link href={projects[2].linkPage} className="cursor-pointer">
             <div
             // ref={ref12}
             // className={`${
@@ -396,9 +402,9 @@ export default function Home() {
                 {projects[2].titleDescription}
               </p>
             </div>
-          </a>
+          </Link>
 
-          <a href={projects[3].linkPage} className="cursor-pointer">
+          <Link href={projects[3].linkPage} className="cursor-pointer">
             <div
             // ref={ref13}
             // className={`${
@@ -426,9 +432,9 @@ export default function Home() {
                 {projects[3].titleDescription}
               </p>
             </div>
-          </a>
+          </Link>
 
-          <a href={projects[4].linkPage} className="cursor-pointer">
+          <Link href={projects[4].linkPage} className="cursor-pointer">
             <div
             // ref={ref16}
             // className={`${
@@ -456,9 +462,9 @@ export default function Home() {
                 {projects[4].titleDescription}
               </p>
             </div>
-          </a>
+          </Link>
 
-          <a href={projects[5].linkPage} className="cursor-pointer">
+          <Link href={projects[5].linkPage} className="cursor-pointer">
             <div
             // ref={ref17}
             // className={`${
@@ -486,7 +492,7 @@ export default function Home() {
                 {projects[5].titleDescription}
               </p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
     </main>
