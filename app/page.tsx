@@ -4,6 +4,7 @@ import { projects } from "./data/projects";
 import { FaMedal } from "react-icons/fa6";
 import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
+import Head from "next/head";
 // import useInView  from "./hook/useInView";
 
 export default function Home() {
@@ -27,18 +28,19 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden">
-      <section
-        className="pt-[0.5rem] bg-cover bg-center h-[100vh] relative bg-black"
-        style={{ backgroundImage: "url('/main-background.webp')" }}
-      >
-        {/* <Image
+      <Head>
+        <link rel="preload" as="image" href="/main-background.webp" />
+      </Head>
+      <section className="pt-[0.5rem] bg-cover bg-center h-[100vh] relative bg-[#0B1023]">
+        <Image
           src="/main-background.webp"
           alt="Background"
-          fill // Ini kunci agar full container
+          fill
           quality={90}
-          priority // preload saat SSR
+          priority
+          fetchPriority="high"
           className="object-cover z-0"
-        /> */}
+        />
         <header className="p-5 z-10 relative">
           <nav className="text-white">
             <ul className="flex gap-10 justify-center mt-1">
