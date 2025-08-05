@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "Raefandy Fadila | Software Engineer",
   description:
     "Portofolio Raefandy Fadila, seorang software engineer dengan fokus pada web development dan aplikasi mobile.",
@@ -37,6 +37,8 @@ export const metadata = {
     "Raefandy Fadila Backend Developer",
     "Raefandy Fadila React",
     "Raefandy Fadila Next.js",
+    "Portofolio Software Engineer",
+    "Software Engineer Portofolio",
   ],
   authors: [
     { name: "Raefandy Fadila", url: "https://raefandyfadila.vercel.app" },

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../component/Header";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -42,7 +43,7 @@ export default function About() {
               target="_blank"
               className="flex flex-col gap-3 items-center"
             >
-              <img className="w-[4rem] h-[4rem]" src="/whatsapp-icon.png" />
+              <Image alt="whatsapp icon" width={64} height={64} src="/whatsapp-icon.png" />
               <p className="text-[14px] font-[400]">Whatsapp</p>
             </a>
             <a
@@ -50,7 +51,7 @@ export default function About() {
               target="_blank"
               className="flex flex-col gap-3 items-center"
             >
-              <img className="w-[4rem] h-[4rem]" src="/email-icon.png" />
+              <Image alt="email icon" width={64} height={64} src="/email-icon.png" />
               <p className="text-[14px] font-[400]">Email</p>
             </a>
             <a
@@ -58,7 +59,7 @@ export default function About() {
               target="_blank"
               className="flex flex-col gap-3 items-center"
             >
-              <img className="w-[4rem] h-[4rem]" src="/linkedin-icon.png" />
+              <Image alt="linkedin icon" width={64} height={64} src="/linkedin-icon.png" />
               <p className="text-[14px] font-[400]">LinkedIn</p>
             </a>
           </div>

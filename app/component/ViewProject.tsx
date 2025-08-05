@@ -1,3 +1,4 @@
+import Image from "next/image";
 type ViewProject = {
     titleImage: string;
     title: string;
@@ -14,9 +15,12 @@ export default function ViewProject(props : ViewProject) {
             "linear-gradient(to bottom, #D9D9D9 0%, #0B1023 100%)",
         }}
       >
-        <img
+        <Image
+          alt="Project"
+          width={544}
+          height={384}
           src={props.titleImage}
-          className="w-[34rem] object-cover h-[24rem] rounded-3xl"
+          className="object-cover rounded-3xl"
         />
       </div>
       <h1 className="mt-5 font-semibold text-[22px]">{props.title}</h1>

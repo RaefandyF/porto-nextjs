@@ -4,6 +4,7 @@ import { LuUserCog } from "react-icons/lu";
 import { projects } from "@/app/data/projects";
 import Link from "next/link";
 import ViewProject from "@/app/component/ViewProject";
+import Image from "next/image";
 
 type Project = {
   id: string;
@@ -21,12 +22,12 @@ type Project = {
   tools: string;
 };
 
-type PageProps = {
+type Props = {
   params: {
     id: string;
   };
 };
-export default function ProjectDetailPage({ params }: PageProps) {
+export default function ProjectDetailPage({ params }: Props) {
   const id = params.id;
   const project = projects.find((p) => p.id === id);
 
@@ -97,11 +98,15 @@ export default function ProjectDetailPage({ params }: PageProps) {
           data-aos-duration="2000"
           data-aos-delay="500"
         >
-          <img
-            src={project.image}
-            className="w-full h-[45rem] max-[445px]:h-[20rem] max-[769px]:h-[30rem] mt-10 object-cover rounded-2xl"
-            alt={project.title}
-          />
+          <div className="relative w-full h-[45rem] max-[445px]:h-[20rem] max-[769px]:h-[30rem] mt-10">
+            <Image
+              fill
+              sizes="100vw"
+              src={project.image}
+              className="object-cover rounded-2xl"
+              alt={project.title}
+            />
+          </div>
         </div>
 
         {/* Duration & Role */}

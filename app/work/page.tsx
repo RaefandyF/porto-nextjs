@@ -1,6 +1,5 @@
 import React from "react";
 import { projects } from "../data/projects";
-import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 import ViewProject from "../component/ViewProject";
 import Header from "../component/Header";
