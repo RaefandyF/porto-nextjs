@@ -21,6 +21,7 @@ export default function ViewProject(props : ViewProject) {
           height={384}
           src={props.titleImage}
           className="object-cover rounded-3xl"
+          priority
         />
       </div>
       <h1 className="mt-5 font-semibold text-[22px]">{props.title}</h1>

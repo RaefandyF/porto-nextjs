@@ -103,6 +103,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               src={project.image}
               className="object-cover rounded-2xl"
               alt={project.title}
+              priority
             />
           </div>
         </div>
