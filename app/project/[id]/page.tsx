@@ -20,11 +20,13 @@ type Project = {
   projectDescription: string;
   tools: string;
 };
-export default function ProjectDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+export default function ProjectDetailPage({ params }: PageProps) {
   const id = params.id;
   const project = projects.find((p) => p.id === id);
 
@@ -124,7 +126,6 @@ export default function ProjectDetailPage({
           </div>
         </div>
 
-        
         <div className="flex gap-2 mt-10 max-[600px]:flex-col">
           <h1
             className="text-[28px] font-semibold mr-[7rem]"
