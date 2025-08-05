@@ -22,11 +22,9 @@ type Project = {
   tools: string;
 };
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
+interface Props {
+  params: { id: string };
+}
 export default function ProjectDetailPage({ params }: Props) {
   const id = params.id;
   const project = projects.find((p) => p.id === id);
