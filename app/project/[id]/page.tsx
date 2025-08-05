@@ -22,11 +22,11 @@ type Project = {
   tools: string;
 };
 
-interface Props {
-  params: { id: string };
-}
-export default function ProjectDetailPage({ params }: Props) {
-  const id = params.id;
+type Props = {
+  params: Promise<{ id: string }>;
+};
+export default async function ProjectDetailPage({ params }: Props) {
+  const { id } = await params;
   const project = projects.find((p) => p.id === id);
 
   if (!project)
