@@ -51,9 +51,9 @@ export const metadata : Metadata = {
     siteName: "Raefandy Fadila",
     images: [
       {
-        url: "https://raefandyfadila.vercel.app/og-image.png",
+        url: "https://raefandyfadila.vercel.app/og-image-2.jpg",
         width: 1200,
-        height: 630,
+        height: 653,
         alt: "Raefandy Fadila Portfolio Preview",
       },
     ],

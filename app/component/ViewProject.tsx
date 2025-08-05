@@ -18,7 +18,7 @@ export default function ViewProject(props : ViewProject) {
         <Image
           alt="Project"
           width={544}
-          height={384}
+          height={400}
           src={props.titleImage}
           className="object-cover rounded-3xl"
           priority
